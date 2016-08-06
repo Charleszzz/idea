@@ -43,15 +43,4 @@ public class RedisDaoTest {
             }
         }
     }
-
-    @Test
-    public void testGetSeckillWithSpring() throws Exception {
-        long seckillId = 1002;
-        logger.info(redisDao.getSeckillWithSpring(seckillId).toString());
-    }
-
-    @Test
-    public void testPutSeckillWithSpring() throws Exception {
-
-    }
 }

@@ -1,7 +1,7 @@
 --数据库初始化脚本
 
 --创建数据库
-CREATE DATABASE scekill;
+CREATE DATABASE seckill;
 
 --使用数据库
 USE seckill;
@@ -18,7 +18,7 @@ CREATE TABLE seckill(
   key idx_start_time(start_time),
   key idx_end_time(end_time),
   key idx_create_time(create_time)
-)ENGINE=InnoDB AUTO_INCREMENT=1000 DEFAULT CHARSET=UTF8 comment'秒杀库存表';
+)ENGINE=InnoDB AUTO_INCREMENT=1000 DEFAULT CHARSET='utf8' comment'秒杀库存表';
 
 --初始化数据
 INSERT into
@@ -32,7 +32,8 @@ values
 
 --秒杀成功明细表
 --用户登录认证相关信息
-CREATE TABLE success_killed(
+DROP TABLE IF EXISTS `success_seckilled`;
+CREATE TABLE success_seckilled(
   seckill_id BIGINT NOT NULL COMMENT '秒杀库存id',
   user_phone BIGINT NOT NULL COMMENT '用户手机号',
   state TINYINT NOT NULL DEFAULT -1 COMMENT '状态展示:-1表示无效,0表示成功,1表示已付款',

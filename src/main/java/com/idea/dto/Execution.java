@@ -1,7 +1,7 @@
 package com.idea.dto;
 
 import com.idea.entity.SuccessSeckilled;
-import com.idea.enums.SeckillState;
+import com.idea.common.emuns.SeckillState;
 
 /**
  * Created by Administrator on 2016/5/21.

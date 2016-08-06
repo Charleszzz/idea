@@ -1,12 +1,13 @@
 package com.idea.entity;
 
+import java.io.Serializable;
 import java.util.Date;
 
 /**
  * 秒杀库存实体
  * Created by Administrator on 2016/5/19.
  */
-public class Seckill {
+public class Seckill implements Serializable {
 
     private long seckillId;
 

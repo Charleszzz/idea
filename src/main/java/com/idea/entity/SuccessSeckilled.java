@@ -1,12 +1,13 @@
 package com.idea.entity;
 
+import java.io.Serializable;
 import java.util.Date;
 
 /**
  * 成功秒杀明细实
  * Created by Administrator on 2016/5/19.
  */
-public class SuccessSeckilled {
+public class SuccessSeckilled implements Serializable {
 
     private long seckillId;
 

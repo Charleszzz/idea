@@ -3,15 +3,15 @@ package com.idea.service.impl;
 import com.idea.dao.SeckillDao;
 import com.idea.dao.SuccessSeckilledDao;
 import com.idea.dao.cache.RedisDao;
-import com.idea.dto.Exposer;
 import com.idea.dto.Execution;
+import com.idea.dto.Exposer;
 import com.idea.entity.Seckill;
 import com.idea.entity.SuccessSeckilled;
-import com.idea.enums.SeckillState;
+import com.idea.common.emuns.SeckillState;
 import com.idea.exception.CloseException;
 import com.idea.exception.DataReWriteException;
-import com.idea.exception.SeckillException;
 import com.idea.exception.RepeatException;
+import com.idea.exception.SeckillException;
 import com.idea.service.SeckillService;
 import org.apache.commons.collections.MapUtils;
 import org.slf4j.Logger;
@@ -20,13 +20,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import static org.springframework.util.DigestUtils.md5DigestAsHex;
-
 import java.io.UnsupportedEncodingException;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
+import static org.springframework.util.DigestUtils.md5DigestAsHex;
 
 
 /**
